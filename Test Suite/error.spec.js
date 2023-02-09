@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import { LoginPage } from '../Fixtures/loginPage.spec';
 import { ProductsPage } from '../Fixtures/productsPage.spec';
 
-test('Lock Demo', async ({ page }) => {
+test('Scenario: Sign in test - User tries logging in with blocked account', async ({ page }) => {
 
     const productsPage = new ProductsPage(page);
     const loginPage = new LoginPage(page);
