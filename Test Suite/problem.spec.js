@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
-import { LoginPage } from '../Fixtures/loginPage.spec';
-import { ProductsPage } from '../Fixtures/productsPage.spec';
+import { LoginPage } from '../pages/loginPage.spec';
+import { ProductsPage } from '../pages/productsPage.spec';
 
 test('Performance Demo', async ({ page }) => {
 
