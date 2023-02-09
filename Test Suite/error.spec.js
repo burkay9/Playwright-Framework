@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
-import { LoginPage } from '../Fixtures/loginPage.spec';
-import { ProductsPage } from '../Fixtures/productsPage.spec';
+import { LoginPage } from '../pages/loginPage.spec';
+import { ProductsPage } from '../pages/productsPage.spec';
 
 test('Scenario: Sign in test - User tries logging in with blocked account', async ({ page }) => {
 
@@ -15,6 +15,5 @@ test('Scenario: Sign in test - User tries logging in with blocked account', asyn
     // Const checks the locator of the error message and console logs it to ensure the assertion reads the error message
     const errormessage = await page.locator('[data-test=error]').innerText();
     expect(errormessage).toContain("Epic sadface: Sorry, this user has been locked out.")
-    console.log(errormessage)
     await page.pause();
 })
